@@ -1,0 +1,27 @@
+# ClaudeStack v1.0 Dependencies
+
+# Core AI functionality
+anthropic>=0.7.0
+
+# File system operations and utilities
+watchdog>=3.0.0
+pathlib2>=2.3.7
+
+# Configuration and data handling
+pyyaml>=6.0
+toml>=0.10.2
+
+# Logging and monitoring
+rich>=13.0.0
+colorama>=0.4.6
+
+# Development and testing (optional)
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+
+# Documentation (optional)
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0

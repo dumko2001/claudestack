@@ -1,0 +1,164 @@
+{
+  "routing_rules": {
+    "planner": {
+      "keywords": [
+        "plan", "design", "architecture", "feature", "build", "create", "implement",
+        "system", "requirements", "specification", "roadmap", "strategy",
+        "how to build", "how to implement", "what should", "need to create",
+        "want to build", "project structure", "technical plan"
+      ],
+      "patterns": [
+        ".*plan.*for.*",
+        ".*how.*build.*",
+        ".*design.*system.*",
+        ".*architecture.*for.*",
+        ".*implement.*feature.*",
+        ".*create.*application.*"
+      ],
+      "description": "Routes requests for planning, architecture, and high-level design"
+    },
+    "coder": {
+      "keywords": [
+        "code", "function", "class", "method", "algorithm", "script", "program",
+        "write code", "implement", "coding", "programming", "develop",
+        "python", "javascript", "java", "c++", "react", "node", "api",
+        "database", "sql", "html", "css", "git", "github"
+      ],
+      "patterns": [
+        ".*write.*code.*",
+        ".*implement.*function.*",
+        ".*create.*class.*",
+        ".*build.*api.*",
+        ".*code.*for.*",
+        ".*programming.*"
+      ],
+      "description": "Routes requests for code implementation and programming tasks"
+    },
+    "reviewer": {
+      "keywords": [
+        "review", "check", "audit", "analyze", "examine", "evaluate",
+        "code review", "feedback", "improve", "optimize", "refactor",
+        "bug", "error", "issue", "problem", "fix", "debug",
+        "security", "performance", "quality"
+      ],
+      "patterns": [
+        ".*review.*code.*",
+        ".*check.*implementation.*",
+        ".*analyze.*function.*",
+        ".*improve.*code.*",
+        ".*find.*bug.*",
+        ".*security.*review.*"
+      ],
+      "description": "Routes requests for code review, analysis, and improvement"
+    },
+    "tester": {
+      "keywords": [
+        "test", "testing", "unit test", "integration test", "qa", "quality",
+        "test case", "test suite", "coverage", "mock", "stub",
+        "pytest", "jest", "junit", "selenium", "cypress",
+        "validate", "verify", "assertion"
+      ],
+      "patterns": [
+        ".*write.*test.*",
+        ".*test.*for.*",
+        ".*testing.*strategy.*",
+        ".*unit.*test.*",
+        ".*integration.*test.*",
+        ".*test.*coverage.*"
+      ],
+      "description": "Routes requests for testing, test creation, and QA"
+    },
+    "designer": {
+      "keywords": [
+        "design", "ui", "ux", "interface", "user experience", "wireframe",
+        "mockup", "prototype", "layout", "visual", "aesthetic",
+        "user interface", "frontend design", "web design", "app design",
+        "figma", "sketch", "adobe", "photoshop"
+      ],
+      "patterns": [
+        ".*design.*interface.*",
+        ".*ui.*for.*",
+        ".*user.*experience.*",
+        ".*visual.*design.*",
+        ".*wireframe.*for.*",
+        ".*design.*mockup.*"
+      ],
+      "description": "Routes requests for UI/UX design and visual interface planning"
+    },
+    "frontend": {
+      "keywords": [
+        "frontend", "front-end", "ui component", "react component", "vue component",
+        "html", "css", "javascript", "typescript", "jsx", "tsx",
+        "bootstrap", "tailwind", "material-ui", "chakra",
+        "responsive", "mobile", "web app", "spa", "pwa"
+      ],
+      "patterns": [
+        ".*frontend.*component.*",
+        ".*react.*component.*",
+        ".*vue.*component.*",
+        ".*html.*css.*",
+        ".*web.*interface.*",
+        ".*responsive.*design.*"
+      ],
+      "description": "Routes requests for frontend implementation and UI components"
+    },
+    "tasker": {
+      "keywords": [
+        "task", "todo", "checklist", "breakdown", "steps", "workflow",
+        "project management", "milestone", "deliverable", "timeline",
+        "organize", "structure", "prioritize", "schedule"
+      ],
+      "patterns": [
+        ".*break.*down.*",
+        ".*create.*tasks.*",
+        ".*todo.*list.*",
+        ".*project.*tasks.*",
+        ".*task.*breakdown.*",
+        ".*organize.*work.*"
+      ],
+      "description": "Routes requests for task breakdown and project organization"
+    },
+    "helper": {
+      "keywords": [
+        "help", "explain", "how", "what", "why", "question", "clarify",
+        "understand", "learn", "tutorial", "guide", "documentation",
+        "best practice", "recommendation", "advice", "suggestion"
+      ],
+      "patterns": [
+        ".*how.*do.*",
+        ".*what.*is.*",
+        ".*explain.*",
+        ".*help.*with.*",
+        ".*best.*practice.*",
+        ".*recommend.*"
+      ],
+      "description": "Routes general questions, explanations, and help requests"
+    }
+  },
+  "default_agent": "helper",
+  "confidence_threshold": 0.6,
+  "routing_settings": {
+    "max_keywords_to_check": 10,
+    "case_sensitive": false,
+    "enable_pattern_matching": true,
+    "enable_keyword_matching": true,
+    "keyword_weight": 0.7,
+    "pattern_weight": 0.3
+  },
+  "agent_priorities": {
+    "planner": 1,
+    "coder": 2,
+    "reviewer": 3,
+    "tester": 4,
+    "designer": 5,
+    "frontend": 6,
+    "tasker": 7,
+    "helper": 8
+  },
+  "special_routing": {
+    "emergency_keywords": ["urgent", "critical", "emergency", "asap", "immediately"],
+    "emergency_agent": "helper",
+    "multi_agent_keywords": ["full stack", "end to end", "complete solution"],
+    "multi_agent_flow": ["planner", "tasker", "coder", "reviewer"]
+  }
+}
